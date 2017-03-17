@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Invoerlijst</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="beoordelingenlijst.js"></script>
+
+</head>
+<body>
+
+Booschappenlijst: <input type="text" id="input-list"/>
+<button type="button" onclick="VoegToe()">Invoeren</button>
+
+<div id="resultaat"></div>
+
+<script>
+
+    function VoegToe() {
+        var x = document.getElementById("input-list").value;
+        var y = document.getElementById("resultaat").innerHTML;
+
+        $("div").append(" " + document.getElementById("input-list").value + "<BR>");
+    }
+
+
+</script>
+
+</body>
+</html>
