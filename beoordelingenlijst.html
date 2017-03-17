@@ -8,6 +8,14 @@ Voer uw cijfer in(tussen 0 en 100): <input type="text" id="myText" value="">
 <br><br>
 <div  id="uitslag"></div>
 </div>
+<br>
+<div id="opmaakk">
+Voer uw cijfer in(tussen 0 en 100): <input type="text" id="myTextt" value="">
+
+<button onclick="Resultaatt()">Resultaat</button>
+<br><br>
+<div  id="uitslagg"></div>
+</div>
 <script>
 function Resultaat() {
 var x = document.getElementById("myText").value;
@@ -26,6 +34,26 @@ else if ( x > 49 && x < 58){
 }
 else {
    return document.getElementById("uitslag").innerHTML ="Uw heeft een verkeerde getal ingevoerd " ;
+
+}
+}
+function Resultaatt() {
+var x = document.getElementById("myTextt").value;
+if( x <= 49){
+
+   return document.getElementById("uitslagg").innerHTML ="De beoordeling is onvoldoende, want het cijfer is " + x  ;
+}
+else if ( x > 49 && x < 58){
+   return document.getElementById("uitslagg").innerHTML ="De beoordeling is matig, want het cijfer is " + x  ;
+   }
+   else if ( x > 59 && x < 73){
+   return document.getElementById("uitslagg").innerHTML ="De beoordeling is voldoende, want het cijfer is " + x  ;
+}
+   else if ( x > 74 && x < 99){
+   return document.getElementById("uitslagg").innerHTML ="De beoordeling is goed, want het cijfer is " + x  ;
+}
+else {
+   return document.getElementById("uitslagg").innerHTML ="Uw heeft een verkeerde getal ingevoerd ";
 
 }
 }
